@@ -1,6 +1,7 @@
 require("dotenv/config");
 const express = require("express");
 const bodyParser = require("body-parser");
+const routes = require("./routes");
 
 const { PORT } = process.env;
 const app = express();
@@ -21,6 +22,8 @@ app.get("/", function (req, res) {
     );
 
 });
+
+app.use("/cora-api", routes());
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}.`);

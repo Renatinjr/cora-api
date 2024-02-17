@@ -1,6 +1,6 @@
 const { Model, Schema } = require("mongoose");
 
-const ContatoModel = new Model(new Schema({
+const ContatoModel = new Model("contatos", new Schema({
     _id: Schema.ObjectId,
     nome: String,
     telefone: String,
